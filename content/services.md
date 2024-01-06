@@ -8,7 +8,7 @@ It carries a lot more detail than what I put on the homepage - I swear!
 
 You want to know what I can do for you?
 
-Well, let me tell yeah!
+Hallo Welt? Wie gehts`?`
 
 ---
 
