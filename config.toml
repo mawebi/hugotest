@@ -1,63 +1,89 @@
-baseURL = "https://example.com"
+######################## default configuration ####################
+baseURL = "https://www.juliaweiler.de/"
+title = "Port Hugo"
+theme = "port-hugo"
 
-# This is a "one page"-website, so we do not need these kinds of pages...
-disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+############################# Plugins ##############################
 
-defaultContentLanguage = "en"
+# CSS Plugins
+[[params.plugins.css]]
+link = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+[[params.plugins.css]]
+link = "https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+[[params.plugins.css]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=swap"
+[[params.plugins.css]]
+link = "plugins/text-animation/text-animation.css"
+[[params.plugins.css]]
+link = "plugins/hugrid/hugrid.css"
 
-# The name of this wonderful theme ;-).
-theme = "hugo-scroll"
+# JS Plugins
+[[params.plugins.js]]
+link = "https://code.jquery.com/jquery-3.5.1.min.js"
+[[params.plugins.js]]
+link = "https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"
+[[params.plugins.js]]
+link = "plugins/text-animation/text-animation.js"
+[[params.plugins.js]]
+link = "plugins/hugrid/hugrid.min.js"
 
-# The browser tab name
-title = "Jane Doe - Nutrition Coach & Chef Consultant"
 
-# In order to add version information in the page's footer set to true.
-# enableGitInfo = true
+############################## navigation ###############################
 
-# Theme-specific variables `.Site.Params.myParamName`
+# main menu
+[[menu.main]]
+name = "Home"
+URL = "#home"
+weight = 1
+
+[[menu.main]]
+name = "About me"
+URL = "#about"
+weight = 2
+
+[[menu.main]]
+name = "Portfolio"
+URL = "#portfolio"
+weight = 3
+
+
+#################### default parameters ################################
 [params]
+logo_light = "images/logo.svg"
+logo_dark = "images/logo-dark.svg"
+copyright = "Copyright Burton Guster &copy;"
+# Meta data
+description = "Personal Portfolio"
+author = "Burton Guster"
+favicon = "images/favicon.png"
+google_analytics = "G-ABCDEFG123"
 
-    # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
-    favicon = "images/favicon.png"
 
-    # These "images" are used for the structured data templates. This will show up, when
-    # services like Twitter or Slack want to generate a preview of a link to your site.
-    # See https://gohugo.io/templates/internal#twitter-cards and https://gohugo.io/templates/internal#open-graph.
-    # NOT the actual header background image, go to _index.md instead
-    images = ["images/cover-image.jpg"]
+# Preloader
+[params.preloader]
+enable = true
+preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
 
-    # When set true, it creates a visual guard (partially transparent rounded box), preventing non-ideal background images from interfering with title/description headings
-    # Ideal images are homogenous around the centre and contrasting to the text.
-    # see CSS classes: .title-and-description-guard, .blog-title, .blog-description
-    # see _index.md header_headline and header_subheadline
-    title_guard = false
+############################# social site ########################
 
-    # Another "title" :-). This one is used as the site_name on the Hugo's internal
-    # opengraph structured data template.
-    # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-    title = "Jane Doe - Nutrition Coach & Chef Consultant"
+[[params.social]]
+icon = "fab fa-github"
+link = "https://github.com/tylerjlawson"
 
-    # The "description" of your website. This is used in the meta data of your generated html.
-    description = "Nutrition Coach & Chef Consultant"
+[[params.social]]
+icon = "fab fa-linkedin"
+link = "https://www.linkedin.com/"
 
-    # A "copyright"-line to be added at the bottom of the page.
-    # Hint: Plain HTML is supported in here as well. So you may e.g. add a link to your legal imprint-page.
-    copyright = "© Jane Doe"
+[[params.social]]
+icon = "fas fa-envelope"
+link = "mailto:guster@burton.com"
 
-    # This theme will, by default, inject a design-by-line at the bottom of the page.
-    # You can turn it off, but we would really appreciate if you don’t :-)
-    hidedesignbyline = false
+[[params.social]]
+icon = "fab fa-medium"
+link = "https://medium.com/@gusburton"
 
-    # The sections of the home page alternate styling. Mark invert as true to swap the styling of the sections
-    invertSectionColors = false
-    
-    [params.footer]
-    # Show contact icons for email/phone (if specified) in the footer of the page
-    showContactIcons = false
-
-    [params.meta]
-        keywords = "some, keywords, for, seo, you, know, google, duckduckgo, and, such"
-
-    [params.contact]
-        email = "mail@janedoe.com"
-        phone = "+49 1111 555555"
+contentDir = "content/english"
+weight = 1
+home = "Home"
